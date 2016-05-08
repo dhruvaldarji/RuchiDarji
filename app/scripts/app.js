@@ -9,6 +9,6 @@
  * Main module of the application.
  */
 angular
-  .module('ruchiDarjiApp', [
+  .module('app', [
     'ngAnimate'
   ]);

@@ -1,5 +1,7 @@
 {
-  "name": "ruchidarji",
+  "name": "RuchiDarji",
+  "description": "Welcome to Ruchi Darji's website.",
+  "license": "All rights reserved Ruchi Darji (2015)",
   "private": true,
   "devDependencies": {
     "autoprefixer-core": "^5.2.1",
@@ -37,6 +39,6 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "grunt test"
+    "postinstall": "bower install"
   }
 }
