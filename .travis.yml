@@ -10,5 +10,5 @@ before_script:
 #  - 'bower install'
 #after_success:
   - git remote add development http://dhruvaldarji.com:/home/dhruvaldarji/public_html/ruchidarji.com/Development
-  - git push development
+  - git push development master
 
