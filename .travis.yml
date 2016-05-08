@@ -18,3 +18,4 @@ after_success:
 - echo "$(<~/.ssh/id_rsa)"
 - git remote add deploy ssh://dhruvaldarji@dhruvaldarji.com/home/dhruvaldarji/public_html/ruchidarji.com/Development/.git
 - git push deploy master
+- yes
