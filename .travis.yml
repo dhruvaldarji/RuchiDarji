@@ -14,5 +14,5 @@ script: echo "skip script"
 after_success:
 - chmod 600 deploy_key
 - mv deploy_key ~/.ssh/id_rsa
-- git remote add deploy dhruvaldarji.com/home/dhruvaldarji/public_html/ruchidarji.com/Development
+- git remote add deploy http://dhruvaldarji.com/home/dhruvaldarji/public_html/ruchidarji.com/Development/.git
 - git push deploy master
