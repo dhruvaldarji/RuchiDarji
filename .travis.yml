@@ -6,16 +6,12 @@ env:
   - '0.12'
   - '0.10'
 before_install:
+  - openssl aes-256-cbc -K $encrypted_32c4cc938277_key -iv $encrypted_32c4cc938277_iv -in deploy_key.enc -out deploy_key -d
   - echo -e "Host dhruvaldarji.com \n\tPort 22 \n\tPreferredAuthentications publickey \n\tIdentityFile ~/.ssh/id_rsa \n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
-  - openssl aes-256-cbc -K $encrypted_32c4cc938277_key -iv $encrypted_32c4cc938277_iv
-    -in deploy_key.enc -out deploy_key -d
-  - echo "$(<~/.ssh/config)"
 install: echo "skip install"
 script: echo "skip script"
 after_success:
 - chmod 600 deploy_key
 - mv deploy_key ~/.ssh/id_rsa
-- echo "$(<~/.ssh/id_rsa)"
-- git remote add deploy ssh://root@dhruvaldarji.com/~dhruvaldarji/public_html/ruchidarji.com/Development/.git
+- git remote add deploy ssh://root@dhruvaldarji.com/home/dhruvaldarji/public_html/ruchidarji.com/Development/.git
 - git push deploy master
-- yes
