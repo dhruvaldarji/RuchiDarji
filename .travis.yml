@@ -5,11 +5,13 @@ env:
   - iojs
   - '0.12'
   - '0.10'
+install: echo "skip install"
 before_install:
+- echo -e "Host dhruvaldarji.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 - openssl aes-256-cbc -K $encrypted_32c4cc938277_key -iv $encrypted_32c4cc938277_iv
   -in deploy_key.enc -out deploy_key -d
-before_script:
+after_success:
 - chmod 600 deploy_key
 - mv deploy_key ~/.ssh/id_rsa
-- git remote add development ssh://root:dhruvaldarji.com/home/dhruvaldarji/public_html/ruchidarji.com/Development
-- git push development master
+- git remote add deploy dhruvaldarji.com/home/dhruvaldarji/public_html/ruchidarji.com/Development
+- git push deploy master
