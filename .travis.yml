@@ -22,3 +22,6 @@ after_success:
 - rm .gitignore
 - git remote add deploy ssh://root@dhruvaldarji.com/home/dhruvaldarji/public_html/ruchidarji.com/Development/.git
 - git push deploy master
+- ssh -22 root@dhruvaldarji.com
+- cd ~dhruvaldarji/public_html/ruchidarji.com/Development
+- npm install
