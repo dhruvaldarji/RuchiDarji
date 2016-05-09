@@ -24,6 +24,6 @@ after_success:
 - chmod 600 deploy_key
 - mv deploy_key ~/.ssh/id_rsa
 #- echo "$(<~/.ssh/id_rsa)"
-- git remote add deploy ssh://dhruvaldarji@dhruvaldarji.com/public_html/ruchidarji.com/Development/.git
+- git remote add deploy ssh://root@dhruvaldarji.com/home/dhruvaldarji/public_html/ruchidarji.com/Development/.git
 - git push deploy master
-- ssh -22 dhruvaldarji@dhruvaldarji.com "cd public_html/ruchidarji.com/Development; bower install; logout"
+- ssh -22 dhruvaldarji@dhruvaldarji.com "cd ~dhruvaldarji/public_html/ruchidarji.com/Development; bower install --allow-root; exit"
