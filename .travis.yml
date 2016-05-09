@@ -12,16 +12,16 @@ before_install:
   \n\tIdentityFile ~/.ssh/id_rsa \n\tStrictHostKeyChecking no \n\tBatchMode yes" >>
   ~/.ssh/config
 #- echo "$(<~/.ssh/config)"
-- npm install -g bower grunt-cli
+#- npm install -g bower grunt-cli
 install:
-- npm install
+#- npm install
 after_success:
 - chmod 600 deploy_key
 - mv deploy_key ~/.ssh/id_rsa
 #- echo "$(<~/.ssh/id_rsa)"
-- rm .gitignore
 - git remote add deploy ssh://root@dhruvaldarji.com/home/dhruvaldarji/public_html/ruchidarji.com/Development/.git
 - git push deploy master
 - ssh -22 root@dhruvaldarji.com
 - cd ~dhruvaldarji/public_html/ruchidarji.com/Development
-- npm install
+- bower install
+- logout
