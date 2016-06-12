@@ -5,7 +5,11 @@ version 0.15.1.
 
 ## Build & development
 
-Run `grunt` for building and `grunt serve` for preview.
+Running `npm install` in the terminal will install all the necessary development dependencies.
+
+Running `bower install` in the terminal will install all the necessary application dependencies.
+
+Running `grunt serve` in the terminal will run the application at `0.0.0.0:9000`.
 
 ## Testing
 
