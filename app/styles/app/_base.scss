@@ -3,22 +3,21 @@
     Theme URI: http://www.ruchidarji.com
     Description: Custom theme for Ruchi Darji
     Version: 1.0.1
-    Author: Dhruval DArji (@dhruvaldarji)
+    Author: Dhruval Darji (@dhruvaldarji)
     Author URI: http://www.dhruvaldarji.com
     Tags: Blank, HTML5, CSS3
 */
 
-//////////////////////////////////
-// Reset bootstrap styles
-//////////////////////////////////
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    // IE auto-hide scrollbars when element not active
-    -ms-overflow-style: -ms-autohiding-scrollbar;
+html {
+    min-height: inherit;
+    height: 100vh;
+    body {
+        background-color: #fefefe;
+        font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+    }
 }
+
 
 :focus {
     outline: none;
@@ -29,15 +28,6 @@ input::-ms-clear {
     display: none;
     width:0;
     height:0;
-}
-
-html {
-    min-height: inherit;
-    max-height: 100%;
-    body {
-        background-color: #fefefe;
-        font-family: 'PT Sans', Helvetica, Arial, sans-serif;
-    }
 }
 
 // IE11 Reset
@@ -53,7 +43,7 @@ html {
 .grow:hover {
     transform: scale(1.06);
     &:after {
-        background-color: yellow;
+        background-color: $color-primary-0;
         z-index: 2000;
     }
 }
