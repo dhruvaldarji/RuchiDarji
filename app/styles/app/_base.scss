@@ -1,0 +1,74 @@
+/*!
+    Theme Name: Ruchi Darji
+    Theme URI: http://www.ruchidarji.com
+    Description: Custom theme for Ruchi Darji
+    Version: 1.0.1
+    Author: Dhruval DArji (@dhruvaldarji)
+    Author URI: http://www.dhruvaldarji.com
+    Tags: Blank, HTML5, CSS3
+*/
+
+//////////////////////////////////
+// Reset bootstrap styles
+//////////////////////////////////
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    // IE auto-hide scrollbars when element not active
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+:focus {
+    outline: none;
+}
+
+// Hide "X" in IE input fields
+input::-ms-clear {
+    display: none;
+    width:0;
+    height:0;
+}
+
+html {
+    min-height: inherit;
+    max-height: 100%;
+    body {
+        background-color: #fefefe;
+        font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+    }
+}
+
+// IE11 Reset
+[contenteditable="false"] {
+    display: none;
+}
+
+// Element animations
+.grow {
+    transition: all .12s ease-in-out;
+}
+
+.grow:hover {
+    transform: scale(1.06);
+    &:after {
+        background-color: yellow;
+        z-index: 2000;
+    }
+}
+
+// Ng-if animations
+.animate-if.ng-enter {
+    transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.25s;
+}
+
+.animate-if.ng-enter,
+.animate-if.ng-leave.ng-leave-active {
+    opacity: 0;
+}
+
+.animate-if.ng-leave,
+.animate-if.ng-enter.ng-enter-active {
+    opacity: 1;
+}

@@ -1,5 +1,5 @@
 {
-  "name": "Ruchi Darji",
+  "name": "ruchidarji",
   "author": "Dhruval Darji",
   "description": "Welcome to Ruchi Darji's website.",
   "version": "1.0.1",
@@ -45,5 +45,9 @@
     "start": "npm install",
     "postinstall": "bower install",
     "test": "grunt test"
+  },
+  "dependencies": {
+    "jasmine-core": "^2.4.1",
+    "phantomjs-prebuilt": "^2.1.7"
   }
 }

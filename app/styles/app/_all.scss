@@ -1,0 +1,12 @@
+// _all.scss
+
+// Base styles for the app.
+@import 'base';
+
+// Import Page styles
+@import
+'_header';
+
+// Import Modal styles
+@import
+'./modals/modal';
