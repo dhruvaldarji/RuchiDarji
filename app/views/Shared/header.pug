@@ -1,0 +1,25 @@
+header.header
+    .head
+        .head__name
+            a(href="http://www.ruchidarji.com")
+                | Ruchi Darji
+        .head__social
+            ul
+                li
+                    a(target="_blank" href="http://www.facebook.com/zoe.zoella")
+                        | Facebook
+                        i.fa.fa-facebook-f
+    .navbar
+        .menu
+            ul.main-menu
+                li
+                    a(ui-sref="rd.app.beauty") Beauty
+                li
+                    a(ui-sref="rd.app.blog") Blog
+
+        form.search(action='//www.ruchidarji.com')
+            label(for='search') Search
+            input#search(type='text', name='s', value='', placeholder='SEARCH', maxlength='255')
+            input.search_input(type="hidden", name="id")
+            button(type='submit', disabled='')
+                i.fa.fa-search

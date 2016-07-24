@@ -1,5 +1,73 @@
 // _header.scss
-
 .header {
+  z-index: 1000;
+  display: block;
+  .head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 1rem;
+    &__name {
+      font-size: 3rem;
+      @media (max-width: $small) {
+        margin: 0 auto;
+      }
+    }
+    &__social {
+      @media (max-width: $small) {
+        display: none;
+      }
+      ul {
+        list-style: none;
+        padding: none;
+        li {
+          margin-left: 1rem;
+        }
+      }
+    }
+  }
+  .navbar {
+      height: 6rem;
+      background: $color-primary-2;
+      color: $color-primary-4;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center;
+      a {
+          color: $color-primary-4;
+      }
 
+      .brand {
+          font-size: 2rem;
+      }
+      .menu {
+          display: flex;
+          flex-flow: row nowrap;
+
+          .main-menu {
+              display: inline-flex;
+              flex-flow: row nowrap;
+              padding: 0;
+              margin-left: 2rem;
+
+              :last-child {
+                  margin-right: 2rem;
+              }
+          }
+          .sub-menu {
+              .sub-menu_header {
+
+              }
+          }
+      }
+      ul {
+          li {
+              list-style: none;
+          }
+      }
+      .search {
+
+      }
+  }
 }

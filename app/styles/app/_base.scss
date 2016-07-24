@@ -11,13 +11,22 @@
 
 html {
     min-height: inherit;
-    height: 100vh;
     body {
-        background-color: #fefefe;
+        background-color: $color-primary-1;
         font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+        display: block;
     }
 }
 
+ui-view {
+    height: 100%;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: $color-accent-4-0;
+}
 
 :focus {
     outline: none;
