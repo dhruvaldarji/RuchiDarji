@@ -496,6 +496,7 @@ module.exports = function(grunt) {
     grunt.task.run([
       'clean:server',
       'wiredep',
+      'pug',
       'concurrent:server',
       'postcss:server',
       'connect:livereload',
