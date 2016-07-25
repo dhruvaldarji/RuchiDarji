@@ -8,10 +8,10 @@
  * Controller of the ruchiDarjiApp
  */
 angular.module('app')
-  .controller('MainCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+    .controller('AppCtrl', AppCtrl);
+
+    AppCtrl.$inject = ['$scope'];
+
+    function AppCtrl($scope) {
+        $scope.currentNavItem = 'Home';
+    };

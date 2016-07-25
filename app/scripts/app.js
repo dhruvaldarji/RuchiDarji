@@ -11,5 +11,7 @@
 angular
   .module('app', [
     'ngAnimate',
-    'ui.router'
+    'ui.router',
+    'ngMaterial',
+    'ngMessages'
   ]);
