@@ -49,7 +49,7 @@
                         }
                     })
                     .state('rd.app.home', {
-                        url: 'home ',
+                        url: 'home',
                         resolve:{
                             log: function(){
                                 return console.log('State: HOME');
@@ -64,26 +64,34 @@
                         }
                     })
                     .state('rd.app.beauty', {
-                        url: 'beauty ',
+                        url: 'beauty',
                         resolve:{
                             log: function(){
                                 return console.log('State: BEAUTY');
                             }
                         },
                         parent: 'rd.app',
-                        templateUrl: appDirectory + 'Shared/body_views/beauty.html',
-                        controller: 'BeautyCtrl'
+                        views: {
+                            'body_view': {
+                                templateUrl: appDirectory + 'Shared/body_views/beauty.html',
+                                controller: 'BeautyCtrl'
+                            }
+                        }
                     })
                     .state('rd.app.blog', {
-                        url: 'blog ',
+                        url: 'blog',
                         resolve:{
                             log: function(){
                                 return console.log('State: BLOG');
                             }
                         },
                         parent: 'rd.app',
-                        templateUrl: appDirectory + 'Shared/body_views/blog.html',
-                        controller: 'BlogCtrl'
+                        views: {
+                            'body_view': {
+                                templateUrl: appDirectory + 'Shared/body_views/blog.html',
+                                controller: 'BlogCtrl'
+                            }
+                        }
                     })
                 ;
             }

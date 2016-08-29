@@ -2,10 +2,9 @@
 
 /**
  * @ngdoc function
- * @name ruchiDarjiApp.controller:MainCtrl
+ * @name app.controller:AppCtrl
  * @description
- * # MainCtrl
- * Controller of the ruchiDarjiApp
+ * # AppCtrl
  */
 angular.module('app')
     .controller('AppCtrl', AppCtrl);
