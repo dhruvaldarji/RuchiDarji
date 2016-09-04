@@ -28,6 +28,14 @@
   }
 }
 
+@mixin a(){
+    text-decoration: none;
+    color: $grey-4;
+    &:hover {
+        color: $color-accent-4-0;
+    }
+}
+
 // Buttons
 @mixin button($type: default) {
     border: 0;
@@ -242,4 +250,3 @@
     height: 3.6rem;
     padding: 0 1rem;
 }
-
