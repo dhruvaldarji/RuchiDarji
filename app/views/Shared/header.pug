@@ -1,10 +1,8 @@
-.header
-    .head
-        .head__name
-            a(href="http://www.ruchidarji.com")
-                | Ruchi Darji
-    md-content
-        md-nav-bar(md-selected-nav-item='currentNavItem', nav-bar-aria-label='navigation links')
-            md-nav-item(md-nav-sref='rd.app.home', name='Home') Home
-            md-nav-item(md-nav-sref='rd.app.beauty', name='Beauty') Beauty
-            md-nav-item(md-nav-sref='rd.app.blog', name='Blog') Blog
+.navigation
+    h1.navigation__brand(href="http://www.ruchidarji.com")
+        | Custom Creative Creations
+    nav.navigation__actions
+        ul.navigation__actions__menu
+            li.navigation__actions__menu__item(ui-sref='rd.app.home', name='Home') Home
+            li.navigation__actions__menu__item(ui-sref='rd.app.beauty', name='Beauty') Beauty
+            li.navigation__actions__menu__item(ui-sref='rd.app.blog', name='Blog') Blog
