@@ -9,6 +9,9 @@
     background-color: $color-primary-1;
     border-bottom: solid 1px $grey-2;
     font-size: 0.8rem;
+    @media (max-width: $small) {
+        line-height: 3rem;
+    }
     .navigation {
         margin-left: 1rem;
         text-transform: uppercase;
@@ -24,6 +27,7 @@
             }
             @media (max-width: $small) {
                 margin: 0 auto;
+                font-size: 0.9rem;
             }
         }
         &__actions {
@@ -65,7 +69,8 @@
             overflow: hidden;
             font-size: 1.5rem;
             @media (max-width: $small) {
-                display: none;
+                margin-left: 1rem;
+                border-left: none;
             }
             &__menu {
                 display: flex;
@@ -83,6 +88,9 @@
                     cursor: pointer;
                     &:first-child {
                         border-left: none;
+                    }
+                    @media (max-width: $small) {
+                        padding: 0 1rem;
                     }
                 }
             }
