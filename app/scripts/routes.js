@@ -6,34 +6,30 @@
 
     angular
         .module('app')
-        .config(['$stateProvider', '$urlRouterProvider',
+        .config(['$stateProvider', '$urlRouterProvider', '$urlMatcherFactoryProvider',
 
-            function($stateProvider, $urlRouterProvider) {
+            function($stateProvider, $urlRouterProvider, $urlMatcherFactoryProvider) {
                 // Routes Stuff
                 var appDirectory = 'views/';
 
+                $urlMatcherFactoryProvider.caseInsensitive(true);
+
                 // Default App redirects/corrections.
                 $urlRouterProvider.when('', '/');
-                // $urlRouterProvider.when('/', '/home');
+                $urlRouterProvider.when('/', '/home');
+
+                $urlRouterProvider.otherwise('/home');
 
                 $stateProvider
                     .state('rd', {
-                        resolve:{
-                            log: function(){
-                                return console.log('State: RD');
-                            }
-                        },
+                        resolve: {},
                         abstract: true,
                         defaultChild: 'app',
                         templateUrl: appDirectory + 'Shared/layout.html'
                     })
                     .state('rd.app', {
                         url: '/',
-                        resolve:{
-                            log: function(){
-                                return console.log('State: APP');
-                            }
-                        },
+                        resolve: {},
                         parent: 'rd',
                         defaultChild: 'home',
                         views: {
@@ -50,11 +46,7 @@
                     })
                     .state('rd.app.home', {
                         url: 'home',
-                        resolve:{
-                            log: function(){
-                                return console.log('State: HOME');
-                            }
-                        },
+                        resolve: {},
                         parent: 'rd.app',
                         views: {
                             'body_view': {
@@ -65,11 +57,7 @@
                     })
                     .state('rd.app.beauty', {
                         url: 'beauty',
-                        resolve:{
-                            log: function(){
-                                return console.log('State: BEAUTY');
-                            }
-                        },
+                        resolve: {},
                         parent: 'rd.app',
                         views: {
                             'body_view': {
@@ -80,11 +68,7 @@
                     })
                     .state('rd.app.blog', {
                         url: 'blog',
-                        resolve:{
-                            log: function(){
-                                return console.log('State: BLOG');
-                            }
-                        },
+                        resolve: {},
                         parent: 'rd.app',
                         views: {
                             'body_view': {
@@ -92,8 +76,7 @@
                                 controller: 'BlogCtrl'
                             }
                         }
-                    })
-                ;
+                    });
             }
         ]);
 })();
