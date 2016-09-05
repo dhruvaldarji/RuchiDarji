@@ -1,0 +1,5 @@
+.layout(ng-model-options="{ updateOn: 'default blur', timezone: ''}", ng-controller="AppCtrl")
+    header.header(ui-view='appHeader')
+    section.body(ui-view='appBody')
+    footer.footer(ui-view='appFooter')
+    sidebar.sidebar(ng-if='ShowSidebar', ui-view='appSidemenu')

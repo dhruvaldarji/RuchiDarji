@@ -1,0 +1,15 @@
+.page.home_view
+    .list(ng-if='Ready && youtube && youtube.items')
+        .list__item(ng-repeat='item in youtube.items')
+            .list__item__header
+                .list__item__header__title
+                    h1.list__item__header__title-title(ng-bind='item.snippet.title')
+                .list__item__header__meta
+                    .list__item__header__meta-date(ng-bind='item.snippet.publishedAt')
+                    .list__item__header__meta-author(ng-bind='item.snippet.channelTitle')
+            .list__item__body
+                iframe.list__item__body-video(src="{{item.videoUrl}}", frameborder="0", allowfullscreen)
+                p.list__item__body-description(ng-bind='item.snippet.description')
+
+    .list-empty(ng-if='Ready && !youtube')
+        | No Videos

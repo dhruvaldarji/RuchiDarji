@@ -2,13 +2,15 @@
 
 /**
  * @ngdoc overview
- * @name ruchiDarjiApp
+ * @name app
  * @description
- * # ruchiDarjiApp
+ * # app
  *
  * Main module of the application.
  */
 angular
   .module('app', [
-    'ngAnimate'
+    'ngAnimate',
+    'ui.router',
+    'ngMaterial'
   ]);

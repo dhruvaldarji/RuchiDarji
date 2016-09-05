@@ -1,5 +1,5 @@
 {
-  "name": "Ruchi Darji",
+  "name": "ruchidarji",
   "author": "Dhruval Darji",
   "description": "Welcome to Ruchi Darji's website.",
   "version": "1.0.1",
@@ -20,6 +20,7 @@
     "grunt-contrib-htmlmin": "^0.4.0",
     "grunt-contrib-imagemin": "^1.0.0",
     "grunt-contrib-jshint": "^0.11.0",
+    "grunt-contrib-pug": "^1.0.0",
     "grunt-contrib-uglify": "^0.7.0",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-filerev": "^2.1.2",
@@ -45,5 +46,10 @@
     "start": "npm install",
     "postinstall": "bower install",
     "test": "grunt test"
+  },
+  "dependencies": {
+    "jasmine-core": "^2.4.1",
+    "phantomjs-prebuilt": "^2.1.7",
+    "pug": "^2.0.0-beta3"
   }
 }
