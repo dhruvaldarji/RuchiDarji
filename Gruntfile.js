@@ -387,7 +387,7 @@ module.exports = function(grunt) {
                     usemin: 'scripts/scripts.js'
                 },
                 cwd: '.tmp/',
-                src: 'views/{,*/}*.html',
+                src: 'views/**/*.html',
                 dest: '.tmp/templateCache.js'
             }
         },
