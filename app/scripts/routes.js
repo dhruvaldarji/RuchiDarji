@@ -41,7 +41,10 @@
                             },
                             // 'appFooter': {
                             //     templateUrl: appDirectory + 'Shared/footer.html'
-                            // }
+                            // },
+                            'sidebar': {
+                                templateUrl: appDirectory + 'Shared/sidebar.html'
+                            }
                         }
                     })
                     .state('rd.app.home', {

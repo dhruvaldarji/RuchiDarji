@@ -88,10 +88,10 @@
         &__body {
             padding: 2rem;
             display: flex;
-            flex: 1 auto;
+            flex-flow: column;
             &-video {
                 margin: 0 auto;
-                min-width: 100%;
+                width: 100%;
                 margin-bottom: 1rem;
                 @media (min-width: $x-small) {
                     min-height: 20rem;
@@ -100,7 +100,10 @@
                     min-height: 28rem;
                 }
             }
-            &-description {}
+            &-description {
+                padding: 1rem;
+                word-break: break-all;
+            }
         }
     }
 }

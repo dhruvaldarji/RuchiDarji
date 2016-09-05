@@ -27,7 +27,7 @@
             gapi.client.load('youtube', 'v3', function() {
                 var request = gapi.client.youtube.search.list({
                     part: 'snippet',
-                    channelId: 'UC4olIz4N_yAZmaBKpmUyY4Q',
+                    channelId: 'UCOg-E5sGR49InH9iGeBENuw',
                     order: 'date',
                     type: 'video'
                 });
