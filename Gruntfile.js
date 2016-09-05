@@ -49,7 +49,7 @@ module.exports = function(grunt) {
         tasks: ['newer:jscs:test', 'karma']
       },
       compass: {
-        files: ['<%= appConfig.app %>/styles/{,*/}*.{scss,sass}'],
+        files: ['<%= appConfig.app %>/styles/**/*.{css,sass,scss}'],
         tasks: ['compass:server', 'postcss:server']
       },
       templates: {
