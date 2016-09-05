@@ -12,5 +12,5 @@ angular.module('app')
     AppCtrl.$inject = ['$scope'];
 
     function AppCtrl($scope) {
-        
+
     };
