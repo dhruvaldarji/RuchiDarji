@@ -414,36 +414,42 @@ module.exports = function(grunt) {
 
     // Copies remaining files to places other tasks can use
     copy: {
-      dist: {
-        files: [{
-          expand: true,
-          dot: true,
-          cwd: '<%= appConfig.app %>',
-          dest: '<%= appConfig.dist %>',
-          src: [
-            '*.{ico,png,txt}',
-            '*.html',
-            'images/{,*/}*.{webp}',
-            'styles/fonts/{,*/}*.*'
-          ]
-        }, {
-          expand: true,
-          cwd: '.tmp/images',
-          dest: '<%= appConfig.dist %>/images',
-          src: ['generated/*']
-        }, {
-          expand: true,
-          cwd: '.',
-          src: '',
-          dest: '<%= appConfig.dist %>'
-        }]
-      },
-      styles: {
-        expand: true,
-        cwd: '<%= appConfig.app %>/styles',
-        dest: '.tmp/styles/',
-        src: '{,*/}*.css'
-      }
+        dist: {
+            files: [{
+                expand: true,
+                dot: true,
+                cwd: '<%= appConfig.app %>',
+                dest: '<%= appConfig.dist %>',
+                src: [
+                    '*.{ico,png,txt,config}',
+                    '*.html',
+                    'images/{,*/}*.{webp}',
+                    'fonts/{,*/}*.*'
+                ]
+            }, {
+                expand: true,
+                cwd: '.tmp/images',
+                dest: '<%= appConfig.dist %>/images',
+                src: ['generated/*']
+            }, {
+                expand: true,
+                cwd: 'bower_components/Ionicons/fonts',
+                src: 'fonts/*',
+                dest: '<%= appConfig.dist %>'
+            }]
+        },
+        styles: {
+            expand: true,
+            cwd: '<%= appConfig.app %>/styles',
+            dest: '.tmp/styles/',
+            src: '{,*/}*.css'
+        },
+        process: {
+            expand: true,
+            cwd: '<%= appConfig.app %>/views/',
+            dest: '.tmp/views/',
+            src: '**/*.html'
+        }
     },
 
     pug: {
