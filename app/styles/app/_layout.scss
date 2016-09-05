@@ -1,5 +1,12 @@
 // _header.scss
 .layout {
   display: block;
-  padding: 3rem;
+  padding: 1rem;
+  @media (min-width: $x-small) {
+      padding: 2rem;
+  }
+  @media (min-width: $small) {
+      padding: 3rem;
+  }
+
 }

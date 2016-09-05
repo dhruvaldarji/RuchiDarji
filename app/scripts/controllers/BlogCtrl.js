@@ -12,5 +12,5 @@ angular.module('app')
     BlogCtrl.$inject = ['$scope'];
 
     function BlogCtrl($scope) {
-        $scope.currentNavItem = 'Home';
+        
     };

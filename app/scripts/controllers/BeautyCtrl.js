@@ -12,5 +12,5 @@ angular.module('app')
     BeautyCtrl.$inject = ['$scope'];
 
     function BeautyCtrl($scope) {
-        $scope.currentNavItem = 'Home';
+        
     };

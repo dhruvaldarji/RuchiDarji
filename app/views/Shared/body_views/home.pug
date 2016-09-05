@@ -1,2 +1,16 @@
 .page.home_view
-    | HOME
+    .list(ng-if='Ready && youtube && youtube.items')
+        .list__item(ng-repeat='item in youtube.items')
+            .list__item__header
+                .list__item__header__title
+                    h1.list__item__header__title-title(ng-bind='item.snippet.title')
+                .list__item__header__meta
+                    .list__item__header__meta-date(ng-bind='item.snippet.publishedAt')
+                    .list__item__header__meta-author(ng-bind='item.snippet.channelTitle')
+            .list__item__body
+                .list__item__body-video
+                    iframe(src="{{item.videoUrl}}", frameborder="0" width='100%', height='100%', allowfullscreen)
+                p.list__item__header__meta-description(ng-bind='item.snippet.description')
+
+    .list-empty(ng-if='Ready && !youtube')
+        | No Videos
