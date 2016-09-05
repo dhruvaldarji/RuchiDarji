@@ -37,7 +37,9 @@
     "jshint-stylish": "^1.0.0",
     "karma-jasmine": "*",
     "karma-phantomjs-launcher": "*",
-    "time-grunt": "^1.0.0"
+    "time-grunt": "^1.0.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-sass": "^1.2.1"
   },
   "engines": {
     "node": ">=0.10.0"
@@ -48,8 +50,6 @@
     "test": "grunt test"
   },
   "dependencies": {
-    "grunt-contrib-sass": "^1.0.0",
-    "grunt-sass": "^1.2.1",
     "jasmine-core": "^2.4.1",
     "phantomjs-prebuilt": "^2.1.7",
     "pug": "^2.0.0-beta3"
