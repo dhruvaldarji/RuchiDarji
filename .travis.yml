@@ -31,4 +31,4 @@ after_success:
 #- echo "$(<~/.ssh/id_rsa)"
 - git remote add deploy ssh://root@dhruvaldarji.com/home/dhruvaldarji/public_html/ruchidarji.com/Development/.git
 - git push deploy master
-- ssh -22 root@dhruvaldarji.com "cd ~dhruvaldarji/public_html/ruchidarji.com/Development; npm install; bower install --allow-root; exit"
+- ssh -22 root@dhruvaldarji.com "cd ~dhruvaldarji/public_html/ruchidarji.com/Development; npm install; bower install; grunt build --allow-root; exit"
