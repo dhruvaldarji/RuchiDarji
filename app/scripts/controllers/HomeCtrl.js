@@ -9,9 +9,9 @@
 angular.module('app')
     .controller('HomeCtrl', HomeCtrl);
 
-HomeCtrl.$inject = ['$scope', '$window', '$sce', 'googleService'];
+HomeCtrl.$inject = ['$scope', '$window', '$sce', 'googleService', '$timeout'];
 
-function HomeCtrl($scope, $window, $sce, googleService) {
+function HomeCtrl($scope, $window, $sce, googleService, $timeout) {
     $scope.Ready = false;
 
     $scope.init = function() {
@@ -34,5 +34,13 @@ function HomeCtrl($scope, $window, $sce, googleService) {
         });
     };
 
-    $scope.init();
+    if($window.gapi.client){
+        $scope.init();
+    }
+    else {
+        $timeout(function () {
+            $scope.init();
+        }, 500);
+    }
+
 };
