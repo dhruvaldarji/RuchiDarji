@@ -29,6 +29,8 @@ module.exports = function(config) {
       'app/bower_components/angular-aria/angular-aria.js',
       'app/bower_components/angular-messages/angular-messages.js',
       'app/bower_components/angular-material/angular-material.js',
+      'app/bower_components/moment/moment.js',
+      'app/bower_components/angular-moment/angular-moment.js',
       'app/bower_components/angular-mocks/angular-mocks.js',
       // endbower
       "app/scripts/**/*.js",

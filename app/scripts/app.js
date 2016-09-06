@@ -12,5 +12,6 @@ angular
   .module('app', [
     'ngAnimate',
     'ui.router',
-    'ngMaterial'
+    'ngMaterial',
+    'angularMoment'
   ]);
