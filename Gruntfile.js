@@ -433,7 +433,7 @@ module.exports = function(grunt) {
                     src: ['generated/*']
                 }, {
                     expand: true,
-                    cwd: 'bower_components/Ionicons/fonts',
+                    cwd: '<%= appConfig.app %>/bower_components/Ionicons',
                     src: 'fonts/*',
                     dest: '<%= appConfig.dist %>'
                 }]
