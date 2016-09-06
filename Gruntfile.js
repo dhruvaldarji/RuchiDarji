@@ -431,13 +431,12 @@ module.exports = function(grunt) {
                     cwd: '.tmp/images',
                     dest: '<%= appConfig.dist %>/images',
                     src: ['generated/*']
-                },
-                {
-                     expand: true,
-                     cwd: 'bower_components/Ionicons/fonts',
-                     src: 'fonts/*',
-                     dest: '<%= yeoman.dist %>'
-               }]
+                }, {
+                    expand: true,
+                    cwd: 'bower_components/Ionicons/fonts',
+                    src: 'fonts/*',
+                    dest: '<%= appConfig.dist %>'
+                }]
             },
             styles: {
                 expand: true,
