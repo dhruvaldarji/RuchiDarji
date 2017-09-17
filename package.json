@@ -4,7 +4,7 @@
   "description": "Welcome to Ruchi Darji's website.",
   "version": "1.0.1",
   "homepage": "http://ruchidarji.com",
-  "license": "All rights reserved. | Ruchi Darji (2016)",
+  "license": "All rights reserved. | Ruchi Darji (2017)",
   "private": true,
   "devDependencies": {
     "autoprefixer-core": "^5.2.1",
@@ -44,15 +44,8 @@
     "phantomjs-prebuilt": "^2.1.7",
     "time-grunt": "^1.0.0"
   },
-  "engines": {
-    "node": ">=0.10.0"
-  },
   "scripts": {
-    "start": "npm install",
-    "postinstall": "bower install",
-    "test": "grunt test"
-  },
-  "dependencies": {
-    "pug": "^2.0.0-beta3"
+    // "start": "npm install",
+    // "test": "grunt test"
   }
 }
